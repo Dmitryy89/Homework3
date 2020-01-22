@@ -182,6 +182,11 @@ margin: 0 auto;}
 			text-align: center;
 			background-color: #f8f8f8;
 		}
+		.container3 .center1 {
+			max-width: 100%;
+			width: 100%;
+			margin: 0 auto;
+		}
 		.container3 h2{
 			text-align: center;
 			font-size: 20px;
@@ -206,16 +211,28 @@ margin: 0 auto;}
 			color: #555555;
 		}
 		.container3 .column{
-			column-count: 2;
+			max-width: 100%;
+			text-align: center;
+			/*column-count: 2;
 			column-width: 555px;
 			column-gap: 30px;
 			height: 230px;
 			text-align: left;
 			font-family: 'Roboto Slab';
 			color: #555555;
-			line-height: 1.5em;
+			line-height: 1.5em;*/
 		}
-
+		.container3 .column1 {
+			max-width: 555px;
+			display: inline-block;
+			height: 230px;
+			text-align: left;
+			font-family: 'Roboto Slab';
+			color: #555555;
+			line-height: 1.5em;
+			font-size: 14px;
+			margin: 0 15px;
+		}
 				.container4 {margin-top: 100px;
 						 text-align: center;
 					}
@@ -248,7 +265,76 @@ margin: 0 auto;}
 				.container4 .submenu{
 					margin-bottom: 70px;
 					}
-				.container4 .galery div {
+					.container4 .galery div{
+						display: inline-block;
+						width:30%;
+						margin:15px 1.5%;
+					}
+					.container4 .galery div img{
+						max-width:100%;
+					}
+					
+					.container4 .galery div .hover-cart{
+						display: flex;
+						min-height: 100%;
+					}
+					
+					.container4 .galery div:hover .hover-cart{
+						margin-bottom: 0;
+						display: flex;
+						justify-content: center;
+						flex-wrap: wrap;
+						align-items: center;
+						position: absolute;
+						padding: 50% 50% 30% 50%;
+						top: 120%;
+						left: 0; 
+						width: 100%;
+						/* margin-top: -100%;  */
+						background-color: #fff;
+						width: 100%;
+						box-sizing: border-box;
+						margin: 0 auto;
+						box-shadow: 20px 20px 104px -10px rgba(0,0,0,0.20);
+						z-index: 2;
+						background: rgba(0, 0, 0, 0.6);
+						outline: 1px solid white;
+						outline-offset: -10px;
+						-webkit-box-sizing: border-box;
+						box-sizing: border-box;
+						-webkit-transition: all 1000ms ease-in-out;
+						-o-transition: all 1000ms ease-in-out;
+						transition: all 1000ms ease-in-out;
+					}
+					.pic-title {
+						padding-top: 28%;
+						padding-bottom: 3%;
+						font-size: 14px;
+						color: #ffffff;
+					}
+					.branding {
+						font-size: 10px;
+						font-family: 'Roboto Slab', serif;
+						color: #ffffff;
+						padding-bottom: 4%;
+					}
+					.btnpic {
+						display: inline-block;
+						font-size: 12px;
+						font-family: 'Roboto Slab', serif;
+						color: #c02f1c80;	
+						background-color: #ffffff;
+						padding: 10px 20px 12px 20px;
+						font-weight: bold;
+						cursor: pointer;
+					}
+					.btnpic .leftarrow {
+						font-size: 20px;
+						font-family: monospace;	
+					}
+
+					
+					/*.container4 .galery div {
 					display: inline-block; 
 					width: 30%; 
 					margin: 0 1.4%; 
@@ -261,7 +347,7 @@ margin: 0 auto;}
 						background-image: url('./images/imagecursor.png');
 						background-repeat: no-repeat;
 						
-					}
+					}*/
 					.container5{
 						background-image: url('./images/imagebkg1.png'), url('./images/imagebkg.png');
 						max-height: 370px;
@@ -273,7 +359,7 @@ margin: 0 auto;}
 						text-align: center;
 						font-size: 26px;
 						color: #ffffff;
-						padding-top: 12vh;
+						padding-top: 100px;
 						font-family: 'Roboto Slsb';
 					}
 					.container5 .str2 {
@@ -285,7 +371,7 @@ margin: 0 auto;}
 					}
 					.container5 .btn {
 						text-align: center;
-						margin-top: 10vh;
+						margin-top: 50px;
 					}
 					.container5 .btn a {
 						text-decoration: none;
@@ -363,18 +449,28 @@ margin: 0 auto;}
 						color: #ffffff;
 
 					}
-					/*@media (max-width: 1250px) {
+					@media (max-width: 1250px) {
 						.center {width: 90%}
 					}
 					@media (max-width: 992px) {
+						.container3 .column1{
+							height: 150px;
+						}
 						.container1 .menu{
 							display: none;
 						}
 
 					}
 					@media (max-width:768px) {
+						.container2 {
+							text-align: center;
+						}
+						.container3 .column{
+							padding-bottom: 30px;
+						}
 						.container2 .cards div{width: 45%;
 						}
+					
 						.container4 .galyry div{
 							margin-bottom: 20px;
 							margin-left: 1%;
@@ -385,10 +481,13 @@ margin: 0 auto;}
 						}
 					}
 					@media (max-width: 500px){
-						.container2 .cards div{width: 100%%;
+						.container2 .cards div{width: 100%;
 						}
 						.container4 .galery div {
 							width:98%;
+						}
+						.container4 .submenu li{
+							padding: 15px 20px;
 						}
 					}
 					@media (max-height: 800px){
@@ -402,4 +501,4 @@ margin: 0 auto;}
 							margin-top: 10vh;
 						}
 					
-					}*/
+					}
